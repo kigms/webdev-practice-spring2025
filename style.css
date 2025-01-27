@@ -21,6 +21,8 @@ body {
 
 .stats-container {
     display: flex;
+    background-color: turquoise;
+    align-items:center;
 }
 
 .stats-card {
@@ -30,6 +32,11 @@ body {
     margin: 1%;
     width: 100%;
     text-align: center;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 #num-contributions, #total-raised, #num-games {
@@ -72,4 +79,79 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.games-link {
+    font-family: 'Cabin';
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background-color:  #45a098;  
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.games-link:hover {
+    background-color: lightseagreen;
+    transform: scale(1.05);
+}
+
+.games-link:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgb(64, 176, 224);
+}
+
+.games-link:active {
+    background-color: turquoise;
+}
+
+.search-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 10;
+}
+
+.search-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.search-input {
+    width: 80%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid turquoise; 
+    border-radius: 5px;
+    margin-top: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #45a049;
+    box-shadow: 0 0 5px rgba(72, 183, 120, 0.5);
+}
+
+.search-input::placeholder {
+    color: #777;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .search-container {
+        width: 90%;
+    }
 }
